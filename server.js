@@ -19,14 +19,13 @@ var lastUserConnection;
 
 io.sockets.on('connection', function(socket){
     console.log('Connection d\'un client !');
-    socket.emit('message', {content : "Vous êtes connectés au serveur ! ", importance: '1'});
     socket.on('message', function(message){
 	console.log(message);
 	socket.broadcast.emit('message', message);
     });
     socket.on('connectionAttempt',function(){
 	socket.emit('userDefine', lastUserConnection);
-     });
+    });
 });
 
 var sess;
@@ -48,6 +47,16 @@ app.get('/chat', function(req, res){
     } else {
 	res.redirect('/');
     }
+});
+
+app.get('/logout', function(req, res){
+    req.session.destroy(function(err){
+	if(err){
+	    console.log(err);
+	} else {
+	    res.redirect('/');
+	}
+    });
 });
 
 app.post('/login', function(req, res){

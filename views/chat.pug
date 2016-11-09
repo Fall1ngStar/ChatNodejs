@@ -5,6 +5,9 @@ html
 		title Chat nodejs
 	body
 		h1 Mon chat
+		p#user
+		p#leave
+			input(type="button" value="Se déconnecter" onClick="leave()")
 		input(type="text" placeholder="Type here ..." id="msg" onKeyPress="if(event.keyCode == 13) sendMessage()")
 		input(type="button" value="Envoyer le message" onClick="sendMessage()")
 		#messages
