@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Chat nodejs</title> 
+  </head>
+  <body>
+    <h1>Mon chat</h1>
+    <input type="text" placeholder="Type here ..." id="msg" onKeyPress="if(event.keyCode == 13) sendMessage()">
+    <input type="button" value="envoyer le message" onClick="sendMessage()"/>
+
+    <div id="messages">
+
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="chat.js"></script>
+  </body>
+</html>
