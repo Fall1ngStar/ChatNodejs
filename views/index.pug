@@ -1,0 +1,11 @@
+doctype html
+html
+	head
+		title= title
+		meta(charset="utf-8")
+		script(src="login.js")
+	body
+		h1= "Connecter vous"
+		#login
+			input(type="text" id="pseudo" placeholder="Entrer votre pseudo")
+			input(type="button" value="connexion" onClick="submit()")
