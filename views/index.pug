@@ -1,15 +1,14 @@
 doctype html
 html
-	head
-		title= title
-		meta(charset="utf-8")
-		script(src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js")
-		script(src="login.js")
-	body
-		h1= "Connectez vous"
-		#login
-			input(type="text" id="pseudo" placeholder="Entrer votre pseudo")
-			br
-			input(type="password" id="password" placeholder="Entrer votre mot de passe")
-			br
-			input(type="button" id="submit" value="connexion")
+  head
+    meta(charset="utf-8")
+    title Page de login
+    script(src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js")
+    script(src="scripts/login.js")
+  body
+    h2 Connectez vous
+    input(type="text" id="username" placeholder="Entrer votre pseudo")
+    br
+    input(type="password" id="passwd" placeholder = "Entrer votre mot de passe")
+    br
+    input(type="button" value="Se connecter" id="submit")
