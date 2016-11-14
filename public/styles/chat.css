@@ -1,0 +1,22 @@
+h1 {
+  color: red;
+  text-align: center;
+}
+
+#chat {
+  height: 70%;
+  position: fixed;
+  border: 3px solid black;
+  right: 20px;
+  left: 20px;
+  bottom: 20px;
+}
+
+#messages {
+  height: 65%;
+  position: fixed;
+  overflow: auto;
+  right: 23px;
+  left: 23px;
+  bottom: 23px;
+}
