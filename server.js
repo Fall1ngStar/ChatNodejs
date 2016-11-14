@@ -40,7 +40,7 @@ connection.connect();
 
 var loginToChat = function(user, passwd, callback)
 {
-  console.log(request);
+  var request = "SELECT * FROM login WHERE user_name = \"" + user +"\"";
   connection.query(request, function(err, rows, cols){
     try {
     if(rows[0].user_name === user){
